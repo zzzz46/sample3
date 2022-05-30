@@ -65,6 +65,12 @@
         box.position.set(0,0,0); //位置を指定
         scene.add(box);   // シーンに追加
 
+        var geometry = new THREE.SphereGeometry(0.2, 32, 32);
+        //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
+        //var box = new THREE.Mesh(geometry, material);
+        var box = new THREE.Mesh(geometry, mat);
+        box.position.set(2,2,2); //位置を指定
+        scene.add(sphere);   // シーンに追加
         update();
 
         // 毎フレーム時に実行されるループイベントです
