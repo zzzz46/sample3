@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
- <h1>石を作成</h1>
+ <h1>犬の生成</h1>
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -51,12 +51,12 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        // 石をスプライトで作成
+        // 犬をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
         var texture = textureLoader.load("img1.png");
         const material = new THREE.SpriteMaterial({ map: texture,});
 
-        // 石を作成
+        // 犬を作成
         for (let i = 0; i < 20; i++) {
           const sprite = new THREE.Sprite(material);
           // ランダムな座標に配置
@@ -64,7 +64,7 @@
           sprite.position.y = 0.5 * Math.random();
           sprite.position.z = 2 * (Math.random() - 0.5);
           // スケールを調整
-          sprite.scale.set(0.5, 0.5, 0.5);
+          sprite.scale.set(0.5, 0.5, 2);
 
           scene.add(sprite);
         }
