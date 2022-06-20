@@ -6,7 +6,6 @@
   </head>
 <body>
  <script>
-   <h1>回転する石犬</h1>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
 
@@ -50,9 +49,10 @@
 
         // テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("img1.png");
+        var texture = textureLoader.load("stone.jpg");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
+  
         // バンプマップ読み込み
         var bump = textureLoader.load("stone-bump.jpg");
         mat.bumpMap = bump;
@@ -66,12 +66,6 @@
         box.position.set(0,0,0); //位置を指定
         scene.add(box);   // シーンに追加
 
-        var geometry = new THREE.SphereGeometry(0.2, 32, 32);
-        var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
-        var sphere = new THREE.Mesh(geometry, material);
-        var sphere = new THREE.Mesh(geometry, mat);
-        box.position.set(1,1,0); //位置を指定
-        scene.add(sphere);   // シーンに追加
         update();
 
         // 毎フレーム時に実行されるループイベントです
@@ -83,8 +77,6 @@
            // 箱を回転させる
           box.rotation.x += 0.01;
           box.rotation.y += 0.01;
-          sphere.rotation.x -= 0.01;
-          sphere.rotation.y -= 0.01;
 
         }
       }
