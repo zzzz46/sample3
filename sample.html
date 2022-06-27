@@ -74,11 +74,11 @@
         var right_g = new THREE.BoxGeometry( 0.5, 0.3, 0.3);
         var material_b = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var right = new THREE.Mesh(right_g, material);
-        right.position.set(0.3,0.0,0);
+        right.position.set(0.3,-0.2,0);
          var left_g = new THREE.BoxGeometry( 0.5, 0.3, 0.3);
         var material_b = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var left = new THREE.Mesh(left_g, material);
-        left.position.set(-0.3,0.0,0);
+        left.position.set(-0.3,-0.2,0);
         
         const aicon = new THREE.Group();
         aicon.add(head);
