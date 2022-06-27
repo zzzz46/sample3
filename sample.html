@@ -67,10 +67,10 @@
         mat.bumpMap = bump;
         mat.bumpscale = 0.2;
         
-        var sphereGeometry = new THREE.SphereGeometry( 1.5, 32, 32 ); 
+        var sphereGeometry = new THREE.SphereGeometry( 1.0, 32, 32 ); 
         var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} );
         var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-        sphere.position.set( 3, 0, 0);
+        sphere.position.set( 0, 0, 0);
         scene.add( sphere ); 
         
         var head_g = new THREE.BoxGeometry( 0.5, 0.3, 0.3);
@@ -90,7 +90,7 @@
         aicon.add(head);
         aicon.add(right);
         aicon.add(left);
-        aicon.position.set(0,1,0);
+        aicon.position.set(-2,1,0);
         scene.add(aicon);
         
         const all = new THREE.Group();
