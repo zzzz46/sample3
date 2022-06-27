@@ -25,23 +25,10 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(0, 0, 5);
+        camera.position.set(0, 0.2, 4);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera, document.body); 
-        
-         var directionalLightM = new THREE.DirectionalLight(0xffffff,0.3);
-      directionalLightM.position.set(0, 10, -5);
-      directionalLightM.castShadow = true; 
-      //シーンに追加
-      scene.add(directionalLightM);
-
-      // 照明を作成SpotLight(色, 光の強さ, 距離, 照射角, ボケ具合, 減衰率)
-      var light = new THREE.SpotLight(0xffffff, 1, 100, Math.PI / 20, 0.2);
-      light.position.set(0,10, -15);
-      //light.target.position.set( 0, 5, -100 );
-      // ライトに影を有効にする
-      light.castShadow = true;
         
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -54,12 +41,6 @@
         // シーンに追加
         scene.add(directionalLight2);
 
-        // helper
-        const gridHelper = new THREE.GridHelper(2,10); // size, step
-        scene.add(gridHelper);
-        const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
-        scene.add(axisHelper);
-        
         var planeGeometry = new THREE.PlaneGeometry(5,5,10,10); //縦、横、分割数、分割数
         var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
         var plane = new THREE.Mesh(planeGeometry,planeMaterial);
