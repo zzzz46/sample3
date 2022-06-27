@@ -25,7 +25,7 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(0, 0.2, 4);
+        camera.position.set(0, 0.2, 5);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera, document.body); 
@@ -62,7 +62,7 @@
         mat.bumpscale = 0.2;
         
         var sphereGeometry = new THREE.SphereGeometry( 0.9, 32, 32 ); 
-        var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} );
+        var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: false} );
         var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
         sphere.position.set( 0, 0.9, 0);
         scene.add( sphere ); 
@@ -101,8 +101,8 @@
           renderer.render(scene, camera);
           requestAnimationFrame(update);
 
-          aicon.position.x += 0.01;
-          aicon.position.y += 0.01;
+          aicon.position.x += 0.02;
+          sphere.position.x += 0.01;
 
         }
       }
