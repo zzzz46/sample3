@@ -67,18 +67,18 @@
         mat.bumpMap = bump;
         mat.bumpscale = 0.2;
         
-        var head_g = new THREE.BoxGeometry( 0.3, 0.5, 0.3);
+        var head_g = new THREE.BoxGeometry( 0.5, 0.3, 0.3);
         var material_b = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var head = new THREE.Mesh(head_g, material);
         head.position.set(0,0.0,0);
-        var right_g = new THREE.BoxGeometry( 0.3, 0.5, 0.3);
+        var right_g = new THREE.BoxGeometry( 0.5, 0.3, 0.3);
         var material_b = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var right = new THREE.Mesh(right_g, material);
-        right.position.set(0.5,0.0,-0.4);
-         var left_g = new THREE.BoxGeometry( 0.3, 0.5, 0.3);
+        right.position.set(0.3,0.0,0);
+         var left_g = new THREE.BoxGeometry( 0.5, 0.3, 0.3);
         var material_b = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var left = new THREE.Mesh(left_g, material);
-        left.position.set(0,0.5,-0.4);
+        left.position.set(-0.3,0.0,0);
         
         const aicon = new THREE.Group();
         aicon.add(head);
