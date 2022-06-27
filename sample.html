@@ -67,6 +67,12 @@
         mat.bumpMap = bump;
         mat.bumpscale = 0.2;
         
+        var sphereGeometry = new THREE.SphereGeometry( 1.5, 32, 32 ); 
+        var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} );
+        var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+        sphere.position.set( 3, 0, 0);
+        scene.add( sphere ); 
+        
         var head_g = new THREE.BoxGeometry( 0.5, 0.3, 0.3);
         var material_b = new THREE.MeshPhongMaterial({ color: 0x0000ff });
         var head = new THREE.Mesh(head_g, material);
