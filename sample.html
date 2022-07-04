@@ -20,6 +20,7 @@
         // レンダラーを作成
         var renderer = new THREE.WebGLRenderer();
         document.body.appendChild(renderer.domElement);
+        renderer.shadowMap.enabled = true;
         renderer.setSize(width, height);
 
         // シーンを作成
