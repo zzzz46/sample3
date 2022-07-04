@@ -38,11 +38,15 @@
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
         directionalLight1.position.set(10, 10, 10);
         directionalLight1.castShadow = true;
+        directionalLight1.shadow.mapSize.width = 2048;
+         directionalLight1.shadow.mapSize.height = 2048;
         scene.add(directionalLight1);
         // 平行光源2
         var directionalLight2 = new THREE.DirectionalLight(0x888888);
         directionalLight2.position.set(-10, -10, 10);
         directionalLight2.castShadow = true;
+        directionalLight2.shadow.mapSize.width = 2048;
+        directionalLight2.shadow.mapSize.height = 2048;
         scene.add(directionalLight2);
 
         var planeGeometry = new THREE.PlaneGeometry(5,5,10,10); //縦、横、分割数、分割数
